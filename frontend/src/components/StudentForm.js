@@ -38,7 +38,7 @@ function StudentForm({ student, onSubmit, buttonText }) {
   return (
     <form onSubmit={handleSubmit}>
       <div className="mb-3">
-        <label htmlFor="firstName" className="form-label">First Name</label>
+        <label htmlFor="firstName" className="form-label text-pink">First Name</label>
         <input
           type="text"
           className="form-control"
@@ -51,7 +51,7 @@ function StudentForm({ student, onSubmit, buttonText }) {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="lastName" className="form-label">Last Name</label>
+        <label htmlFor="lastName" className="form-label text-pink">Last Name</label>
         <input
           type="text"
           className="form-control"
@@ -64,7 +64,7 @@ function StudentForm({ student, onSubmit, buttonText }) {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="email" className="form-label">Email</label>
+        <label htmlFor="email" className="form-label text-pink">Email</label>
         <input
           type="email"
           className="form-control"
@@ -77,7 +77,7 @@ function StudentForm({ student, onSubmit, buttonText }) {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="phone" className="form-label">Phone</label>
+        <label htmlFor="phone" className="form-label text-pink">Phone</label>
         <input
           type="text"
           className="form-control"
@@ -90,7 +90,7 @@ function StudentForm({ student, onSubmit, buttonText }) {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="enrollmentNo" className="form-label">Enrollment Number</label>
+        <label htmlFor="enrollmentNo" className="form-label text-pink">Enrollment Number</label>
         <input
           type="text"
           className="form-control"
@@ -103,7 +103,7 @@ function StudentForm({ student, onSubmit, buttonText }) {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="rollNo" className="form-label">Roll Number</label> {/* Added roll number input */}
+        <label htmlFor="rollNo" className="form-label text-pink">Roll Number</label>
         <input
           type="text"
           className="form-control"
@@ -116,7 +116,7 @@ function StudentForm({ student, onSubmit, buttonText }) {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="course" className="form-label">Course</label>
+        <label htmlFor="course" className="form-label text-pink">Course</label>
         <input
           type="text"
           className="form-control"
@@ -137,11 +137,11 @@ function StudentForm({ student, onSubmit, buttonText }) {
           checked={formData.active}
           onChange={handleChange}
         />
-        <label className="form-check-label" htmlFor="active">Active</label>
+        <label className="form-check-label text-pink" htmlFor="active">Active</label>
       </div>
 
       <div className="mb-3">
-        <label htmlFor="dateOfBirth" className="form-label">Date of Birth</label>
+        <label htmlFor="dateOfBirth" className="form-label text-pink">Date of Birth</label>
         <input
           type="date"
           className="form-control"
@@ -152,11 +152,12 @@ function StudentForm({ student, onSubmit, buttonText }) {
         />
       </div>
 
-      <button type="submit" className="btn btn-pink">{buttonText || 'Submit'}</button> {/* Added custom button color */}
+      <button type="submit" className="btn btn-pink text-white">{buttonText || 'Submit'}</button>
     </form>
   );
 }
 
 export default StudentForm;
+
 
 
