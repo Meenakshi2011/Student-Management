@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'; 
+import React, { useState, useEffect } from 'react';
 
 function StudentForm({ student, onSubmit, buttonText }) {
   const [formData, setFormData] = useState({
@@ -7,8 +7,8 @@ function StudentForm({ student, onSubmit, buttonText }) {
     email: '',
     phone: '',
     enrollmentNo: '',
-    rollNo: '', // Added roll number field
     course: '',
+    rollNo: '', /* Added Roll No */
     active: true,
     dateOfBirth: ''
   });
@@ -38,7 +38,7 @@ function StudentForm({ student, onSubmit, buttonText }) {
   return (
     <form onSubmit={handleSubmit}>
       <div className="mb-3">
-        <label htmlFor="firstName" className="form-label text-pink">First Name</label>
+        <label htmlFor="firstName" className="form-label">First Name</label>
         <input
           type="text"
           className="form-control"
@@ -51,7 +51,7 @@ function StudentForm({ student, onSubmit, buttonText }) {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="lastName" className="form-label text-pink">Last Name</label>
+        <label htmlFor="lastName" className="form-label">Last Name</label>
         <input
           type="text"
           className="form-control"
@@ -64,7 +64,7 @@ function StudentForm({ student, onSubmit, buttonText }) {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="email" className="form-label text-pink">Email</label>
+        <label htmlFor="email" className="form-label">Email</label>
         <input
           type="email"
           className="form-control"
@@ -77,7 +77,7 @@ function StudentForm({ student, onSubmit, buttonText }) {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="phone" className="form-label text-pink">Phone</label>
+        <label htmlFor="phone" className="form-label">Phone</label>
         <input
           type="text"
           className="form-control"
@@ -90,7 +90,7 @@ function StudentForm({ student, onSubmit, buttonText }) {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="enrollmentNo" className="form-label text-pink">Enrollment Number</label>
+        <label htmlFor="enrollmentNo" className="form-label">Enrollment Number</label>
         <input
           type="text"
           className="form-control"
@@ -103,7 +103,7 @@ function StudentForm({ student, onSubmit, buttonText }) {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="rollNo" className="form-label text-pink">Roll Number</label>
+        <label htmlFor="rollNo" className="form-label">Roll Number</label> {/* Added Roll No field */}
         <input
           type="text"
           className="form-control"
@@ -111,12 +111,11 @@ function StudentForm({ student, onSubmit, buttonText }) {
           name="rollNo"
           value={formData.rollNo}
           onChange={handleChange}
-          required
         />
       </div>
 
       <div className="mb-3">
-        <label htmlFor="course" className="form-label text-pink">Course</label>
+        <label htmlFor="course" className="form-label">Course</label>
         <input
           type="text"
           className="form-control"
@@ -137,11 +136,11 @@ function StudentForm({ student, onSubmit, buttonText }) {
           checked={formData.active}
           onChange={handleChange}
         />
-        <label className="form-check-label text-pink" htmlFor="active">Active</label>
+        <label className="form-check-label" htmlFor="active">Active</label>
       </div>
 
       <div className="mb-3">
-        <label htmlFor="dateOfBirth" className="form-label text-pink">Date of Birth</label>
+        <label htmlFor="dateOfBirth" className="form-label">Date of Birth</label>
         <input
           type="date"
           className="form-control"
@@ -152,12 +151,11 @@ function StudentForm({ student, onSubmit, buttonText }) {
         />
       </div>
 
-      <button type="submit" className="btn btn-pink text-white">{buttonText || 'Submit'}</button>
+      <button type="submit" className="btn btn-green">{buttonText || 'Submit'}</button>
     </form>
   );
 }
 
 export default StudentForm;
-
 
 
