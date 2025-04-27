@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #4caf50; /* Green background */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,15 +22,16 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 20px;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-/* Button styles for pink background and white text */
-.btn-pink {
-  background-color: #e91e63; /* Pink background */
+/* Green Button styles with white text */
+.btn-green {
+  background-color: #4caf50; /* Green background */
   color: white;              /* White text */
   border: none;              /* No border */
   padding: 10px 20px;        /* Padding around the text */
@@ -39,16 +40,16 @@
   transition: background-color 0.3s ease; /* Smooth background transition */
 }
 
-.btn-pink:hover {
-  background-color: #d81b60; /* Darker pink on hover */
+.btn-green:hover {
+  background-color: #45a049; /* Darker green on hover */
 }
 
-/* Optional: Add pink borders and background for inputs or text areas */
+/* Optional: Add green borders and background for inputs or text areas */
 input[type="text"],
 input[type="email"],
 input[type="date"],
 textarea {
-  border: 2px solid #e91e63; /* Pink border */
+  border: 2px solid #4caf50; /* Green border */
   padding: 8px;
   font-size: 14px;
   width: 100%;
@@ -60,12 +61,12 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="date"]:focus,
 textarea:focus {
-  border-color: #d81b60; /* Darker pink when focused */
+  border-color: #45a049; /* Darker green when focused */
 }
 
 /* Optional: Update the link styles */
 .App-link {
-  color: #e91e63;  /* Pink color for links */
+  color: #4caf50;  /* Green color for links */
 }
 
 @keyframes App-logo-spin {
