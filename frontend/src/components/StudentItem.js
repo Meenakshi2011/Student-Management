@@ -9,7 +9,7 @@ function StudentItem({ student, onDelete }) {
       <td>{student.email}</td>
       <td>{student.phone}</td>
       <td>{student.enrollmentNo}</td>
-      <td>{student.rollNo}</td> {/* Display roll number */}
+      <td>{student.rollNo}</td> {/* Added Roll No field */}
       <td>{student.course}</td>
       <td>{student.active ? 'Yes' : 'No'}</td>
       <td>{student.dateOfBirth ? new Date(student.dateOfBirth).toLocaleDateString() : ''}</td>
@@ -17,10 +17,7 @@ function StudentItem({ student, onDelete }) {
         <Link to={`/edit-student/${student._id}`} className="btn btn-sm btn-green me-2">
           Edit
         </Link>
-        <button 
-          onClick={() => onDelete(student._id)} 
-          className="btn btn-sm btn-green"
-        >
+        <button onClick={() => onDelete(student._id)} className="btn btn-sm btn-green">
           Delete
         </button>
       </td>
