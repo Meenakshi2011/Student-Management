@@ -7,6 +7,7 @@ function StudentForm({ student, onSubmit, buttonText }) {
     email: '',
     phone: '',
     enrollmentNo: '',
+    rollNo: '',  // New field for roll number
     course: '',
     active: true,
     dateOfBirth: ''
@@ -36,9 +37,9 @@ function StudentForm({ student, onSubmit, buttonText }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} style={{ maxWidth: '600px', margin: '0 auto', backgroundColor: '#34495e', padding: '20px', borderRadius: '8px' }}>
       <div className="mb-3">
-        <label htmlFor="firstName" className="form-label">First Name</label>
+        <label htmlFor="firstName" className="form-label" style={{ color: '#ecf0f1' }}>First Name</label>
         <input
           type="text"
           className="form-control"
@@ -47,11 +48,12 @@ function StudentForm({ student, onSubmit, buttonText }) {
           value={formData.firstName}
           onChange={handleChange}
           required
+          style={{ borderColor: '#3498db' }}
         />
       </div>
 
       <div className="mb-3">
-        <label htmlFor="lastName" className="form-label">Last Name</label>
+        <label htmlFor="lastName" className="form-label" style={{ color: '#ecf0f1' }}>Last Name</label>
         <input
           type="text"
           className="form-control"
@@ -60,11 +62,12 @@ function StudentForm({ student, onSubmit, buttonText }) {
           value={formData.lastName}
           onChange={handleChange}
           required
+          style={{ borderColor: '#3498db' }}
         />
       </div>
 
       <div className="mb-3">
-        <label htmlFor="email" className="form-label">Email</label>
+        <label htmlFor="email" className="form-label" style={{ color: '#ecf0f1' }}>Email</label>
         <input
           type="email"
           className="form-control"
@@ -73,11 +76,12 @@ function StudentForm({ student, onSubmit, buttonText }) {
           value={formData.email}
           onChange={handleChange}
           required
+          style={{ borderColor: '#3498db' }}
         />
       </div>
 
       <div className="mb-3">
-        <label htmlFor="phone" className="form-label">Phone</label>
+        <label htmlFor="phone" className="form-label" style={{ color: '#ecf0f1' }}>Phone</label>
         <input
           type="text"
           className="form-control"
@@ -86,11 +90,12 @@ function StudentForm({ student, onSubmit, buttonText }) {
           value={formData.phone}
           onChange={handleChange}
           required
+          style={{ borderColor: '#3498db' }}
         />
       </div>
 
       <div className="mb-3">
-        <label htmlFor="enrollmentNo" className="form-label">Enrollment Number</label>
+        <label htmlFor="enrollmentNo" className="form-label" style={{ color: '#ecf0f1' }}>Enrollment Number</label>
         <input
           type="text"
           className="form-control"
@@ -99,11 +104,25 @@ function StudentForm({ student, onSubmit, buttonText }) {
           value={formData.enrollmentNo}
           onChange={handleChange}
           required
+          style={{ borderColor: '#3498db' }}
         />
       </div>
 
       <div className="mb-3">
-        <label htmlFor="course" className="form-label">Course</label>
+        <label htmlFor="rollNo" className="form-label" style={{ color: '#ecf0f1' }}>Roll Number</label>
+        <input
+          type="text"
+          className="form-control"
+          id="rollNo"
+          name="rollNo"
+          value={formData.rollNo}
+          onChange={handleChange}
+          style={{ borderColor: '#3498db' }}
+        />
+      </div>
+
+      <div className="mb-3">
+        <label htmlFor="course" className="form-label" style={{ color: '#ecf0f1' }}>Course</label>
         <input
           type="text"
           className="form-control"
@@ -112,6 +131,7 @@ function StudentForm({ student, onSubmit, buttonText }) {
           value={formData.course}
           onChange={handleChange}
           required
+          style={{ borderColor: '#3498db' }}
         />
       </div>
 
@@ -124,11 +144,11 @@ function StudentForm({ student, onSubmit, buttonText }) {
           checked={formData.active}
           onChange={handleChange}
         />
-        <label className="form-check-label" htmlFor="active">Active</label>
+        <label className="form-check-label" htmlFor="active" style={{ color: '#ecf0f1' }}>Active</label>
       </div>
 
       <div className="mb-3">
-        <label htmlFor="dateOfBirth" className="form-label">Date of Birth</label>
+        <label htmlFor="dateOfBirth" className="form-label" style={{ color: '#ecf0f1' }}>Date of Birth</label>
         <input
           type="date"
           className="form-control"
@@ -136,12 +156,14 @@ function StudentForm({ student, onSubmit, buttonText }) {
           name="dateOfBirth"
           value={formData.dateOfBirth}
           onChange={handleChange}
+          style={{ borderColor: '#3498db' }}
         />
       </div>
 
-      <button type="submit" className="btn btn-primary">{buttonText || 'Submit'}</button>
+      <button type="submit" className="btn btn-primary" style={{ backgroundColor: '#3498db', borderColor: '#2980b9', fontWeight: '600' }}>{buttonText || 'Submit'}</button>
     </form>
   );
 }
 
 export default StudentForm;
+
