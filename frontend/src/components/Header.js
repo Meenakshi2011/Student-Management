@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <header className="bg-dark text-white p-3" style={{ backgroundColor: '#4caf50' }}>
+    <header className="App-header">
       <div className="container">
         <div className="d-flex justify-content-between align-items-center">
           <Link to="/" className="text-white text-decoration-none">
-            <h1 style={{ color: 'white' }}>Student Management System</h1>
+            <h1>Student Management System</h1>
           </Link>
           <nav>
             <Link to="/" className="btn btn-green me-2">Home</Link>
@@ -21,5 +21,4 @@ function Header() {
 }
 
 export default Header;
-
 
