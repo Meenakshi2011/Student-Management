@@ -14,13 +14,12 @@ function StudentItem({ student, onDelete }) {
       <td>{student.active ? 'Yes' : 'No'}</td>
       <td>{student.dateOfBirth ? new Date(student.dateOfBirth).toLocaleDateString() : ''}</td>
       <td>
-        <Link to={`/edit-student/${student._id}`} className="btn btn-sm btn-info me-2" style={{ backgroundColor: '#ff69b4', color: 'white' }}>
+        <Link to={`/edit-student/${student._id}`} className="btn btn-sm btn-pink text-white me-2">
           Edit
         </Link>
         <button 
           onClick={() => onDelete(student._id)} 
-          className="btn btn-sm btn-danger" 
-          style={{ backgroundColor: '#ff69b4', color: 'white' }}
+          className="btn btn-sm btn-pink text-white"
         >
           Delete
         </button>
@@ -30,5 +29,4 @@ function StudentItem({ student, onDelete }) {
 }
 
 export default StudentItem;
-
 
