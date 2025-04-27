@@ -28,6 +28,46 @@
   color: #61dafb;
 }
 
+/* Button styles for pink background and white text */
+.btn-pink {
+  background-color: #e91e63; /* Pink background */
+  color: white;              /* White text */
+  border: none;              /* No border */
+  padding: 10px 20px;        /* Padding around the text */
+  font-size: 16px;           /* Font size */
+  cursor: pointer;          /* Pointer cursor */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.btn-pink:hover {
+  background-color: #d81b60; /* Darker pink on hover */
+}
+
+/* Optional: Add pink borders and background for inputs or text areas */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea {
+  border: 2px solid #e91e63; /* Pink border */
+  padding: 8px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 400px;
+  margin: 10px 0;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+  border-color: #d81b60; /* Darker pink when focused */
+}
+
+/* Optional: Update the link styles */
+.App-link {
+  color: #e91e63;  /* Pink color for links */
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
