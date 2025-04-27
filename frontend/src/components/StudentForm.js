@@ -7,8 +7,8 @@ function StudentForm({ student, onSubmit, buttonText }) {
     email: '',
     phone: '',
     enrollmentNo: '',
+    rollNo: '',  // Roll number added
     course: '',
-    rollNo: '', /* Added Roll No */
     active: true,
     dateOfBirth: ''
   });
@@ -103,7 +103,7 @@ function StudentForm({ student, onSubmit, buttonText }) {
       </div>
 
       <div className="mb-3">
-        <label htmlFor="rollNo" className="form-label">Roll Number</label> {/* Added Roll No field */}
+        <label htmlFor="rollNo" className="form-label">Roll Number</label>
         <input
           type="text"
           className="form-control"
@@ -111,6 +111,7 @@ function StudentForm({ student, onSubmit, buttonText }) {
           name="rollNo"
           value={formData.rollNo}
           onChange={handleChange}
+          required
         />
       </div>
 
@@ -157,5 +158,4 @@ function StudentForm({ student, onSubmit, buttonText }) {
 }
 
 export default StudentForm;
-
 
